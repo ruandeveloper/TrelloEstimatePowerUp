@@ -16,7 +16,7 @@ var requestcard = {
   "method": "GET"
 }
 
-//FIM DO REQUEST --------------------------------------------------------------------------------------
+//FIM DOS REQUESTS --------------------------------------------------------------------------------------
 
 //AJAX DO REQUEST DAS LISTAS REQUESTLIST
 $.ajax(requestlist).done(function (listas) {
@@ -36,7 +36,6 @@ $.ajax(requestlist).done(function (listas) {
 //AJAX DOS CARDS REQUESTCARD
 $.ajax(requestcard).done(function (cards) {
   console.log(cards);
-  //FOR DAS CARDS-----------------------------------------------------------------------------------
   document.write("<HR>CARDS DA BOARD:<BR><BR>");
   for (var i = 0; i < cards.length; i++) {
     //PEGANDO O VALOR CONTIDO DENTRO DAS CUSTOM FIELDS (pluginData)
@@ -46,7 +45,7 @@ $.ajax(requestcard).done(function (cards) {
       "url": "https://api.trello.com/1/cards/" + cards[i].shortLink + "/pluginData?key=a15c445a9a0bc0efd2332aac48bd1bfc&token=01e8f3762fa91f254aae825f349abb1ec6adb1c8fadb7f03b9d28e3e62127584",
       "method": "GET"
     }
-    //IMPRIMINDO
+ 
     document.write(cards[i].name + " | id= " + cards[i].id + "<BR>ID DA LIST:  " + cards[i].idList + "<BR>ID COMPACTO:  " + cards[i].shortLink + "<br>");
 
     $.ajax(requestplugin).done(function (plugin) {
@@ -55,7 +54,9 @@ $.ajax(requestcard).done(function (cards) {
       $num.replace(/[^\d]+/g, '');
       $num = $num.substr(1); //!!!DELETEI O PRIMEIRO NUMERO QUE ERA 2, POIS ESSE ERA PARTE DO CODIGO DA FIELDS ||OBS: DEVO CORRIGIR ISSO DEPOIS
       document.write("O PLUGIN :" + $num + "<BR><BR>");
+
       //FIM DA FOR CARDS --------------------------------------------------------------------------------  
     })
   }
 });
+
