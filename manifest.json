@@ -1,29 +1,19 @@
 {
-    "name": "ESTIMATIVA DE ESFORÇO",
-    "description": "",
-    "details": "PowerUp para Trello, que auxilia na obtenção de estimativas de esforço.",
-    "icon": {
-      "url": "./images/logo.png"
-    },
-    "author": "RUAN OLIVEIRA NASCIMENTO",
-    "capabilities": [
-      "attachment-sections",
-      "attachment-thumbnail",
-      "board-buttons",
-      "callback",
-      "card-badges",
-      "card-buttons",
-      "card-detail-badges",
-      "card-from-url",
-      "format-url",
-      "show-settings"
-    ],
-    "connectors": {
-      "iframe": {
-        "url": "./index.html"
-      }
-    },
-    "recommend": {
-      "urls": []
+  "name": "Estimate",
+  "details":"Estimate é um power-up criado para criar estimativas de esforço. \n Adicone uma quantidade de horas em cada card de uma list e ao final mostramos a quantidade total de horas da list\n\n# O power-up só usa hora como valor\n Os badges Azuis representam a quantidade de horas de cada card, os Amarelos representam a quantidade de horas de cada list\n\n### Screenshot\n\n![Back of card Bitbucket section](https://cdn.glitch.com/5604e035-f1e2-4a49-b355-f184d6a83a48%2Fexemplo3.PNG?1506711834288)",
+  "icon": {
+    "url": "https://cdn.glitch.com/5604e035-f1e2-4a49-b355-f184d6a83a48%2Fclock.png?1506366848851"
+  },
+  "author": "RUAN OLIVEIRA NASCIMENTO.",
+  "capabilities": [
+    "callback",
+    "card-buttons",
+    "card-badges",
+    "card-detail-badges"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "./index.html"
     }
   }
+}
